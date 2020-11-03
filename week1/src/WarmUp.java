@@ -1,6 +1,6 @@
-public class main {
+public class WarmUp {
     public static void main(String[] args) {
-        new main().program();
+        new WarmUp().program();
     }
 
     private void program() {
@@ -31,7 +31,6 @@ public class main {
         } catch (Exception exception) {
             System.out.println(exception.toString());
         }
-
     }
 
     boolean isPalindrome(String original) {
