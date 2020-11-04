@@ -19,21 +19,21 @@ public class GuessingGame {
         }
 
         int counter = 1;
-        int lowerBound = 0;
-        int upperBound = 10001;
+        int lo = 0;
+        int hi = 10001;
         int guess;
 
-        while (true){
+        while (lo <= hi){
 
-            guess = lowerBound + random.nextInt(upperBound - lowerBound);
+            guess = lo + random.nextInt(hi - lo);
 
             System.out.println("Is the number " + guess + "?");
 
             if (input.equals("h")){
-                lowerBound = guess;
+                lo = guess;
             }
             else if (input.equals("l")){
-                upperBound = guess;
+                hi = guess;
             }
             else if (input.equals("c")){
                 System.out.println("YAY, it took me " + counter + " guesses to get it right!");
