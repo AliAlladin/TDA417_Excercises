@@ -1,0 +1,7 @@
+3.  If we increase the size of the array by 50% we would at most copy 1,5*n. The generalisation for increasing an array
+    by a factor k would be k*n characters copied at most.
+
+5.  Since the dictionary is sorted alphabetically (ascending) i would say that initially you open the dictionary based
+    on where the first letter is in the alphabet and then try to find the first letter specifically. After that i guess
+    it's some kind of linear search where you look for the following letters and eventually slow down when you're close
+    enough.

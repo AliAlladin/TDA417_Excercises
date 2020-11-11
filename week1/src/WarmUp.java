@@ -56,12 +56,12 @@ public class WarmUp {
 
 
     public static class DynamicArray<A> {
-        private Object[] array = new Object[1];
+        private A[] array = (A[]) new Object[1];
         private int used = 0;
 
         void add(A value) {
             if (array.length == used) {
-                Object[] newArray = new Object[array.length * 2];
+                A[] newArray = (A[]) new Object[array.length * 2];
                 for (int i = 0; i < array.length; i++) {
                     newArray[i] = array[i];
                 }
@@ -76,7 +76,7 @@ public class WarmUp {
             if (index < 0 || index >= array.length) {
                 throw new ArrayIndexOutOfBoundsException();
             }
-            return (A) array[index];
+            return array[index];
         }
 
         void set(int index, A value) {
