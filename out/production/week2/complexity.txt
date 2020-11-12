@@ -1,0 +1,41 @@
+Q1.  -
+
+Q2. If the array is not full it’s 1 operation so the complexity is O(1). To add n characters we would in the worst case
+    need to copy k*n characters where k is the percentage we want to increase our array with, so the complexity would be
+    O(n)
+
+Q3. When deleting an element from the middle of an array we would need to shift all the following elements one. This
+    would give us the complexity O(n).
+
+Q4. 1.  By just assigning that index the value 0 or making it point on nothing (null).
+    2.  When we have an dynamic array we increase the size of the array by e.g. doubling the array everytime it gets
+        full. If we add a bunch of items we will eventually end up with quite a big array. And then when we just delete
+        the values we will end up with a big array that's mostly empty.
+    3.  If we have a bunch of add and delete operations followed by each other at a point when the array should be
+        doubled or halved we will constantly be creating ne arrays and copying the elements.
+    4.  To half the array-size when it's quarter full.
+
+Q5. Since all the same elements will be followed by ach other we can just count them and store the value in an variable.
+
+Q6. 1.  O(n)
+    2.  O(log(n))
+    3.  O(1)
+    4.  O(1)/O(n)?
+
+Q7. Insertion Sort:
+        Best: O(n)
+        Worst: O(n^2)
+    Merge Sort:
+        Best: O(n)
+        Worst: O(n)
+    Quick Sort:
+        Best: O(n)
+        Worst: O(n^2)
+
+Q8. 1.  O(n^10)
+    2.  O(1)
+    3.  O(n^2)
+    4.  O(log(n))
+    5.  O(1)
+    6.  O(log(n))
+    7.  O(log(n))
