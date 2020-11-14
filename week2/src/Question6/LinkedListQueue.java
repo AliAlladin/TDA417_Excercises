@@ -27,31 +27,59 @@ class LinkedListQueue<Item> implements Queue<Item>, Iterable<Item> {
         size = 0;
     }
 
+    /**
+     * If the list is empty then the first and last are pointed towards a new node in which the item is saved that is
+     * created. Else the node and then adds it to the end of list. If the list is empty then the first and last are
+     * pointed towards the node.
+     * Time Complexity: O(1)
+     * @param x the Item that wants to be enqueued.
+     */
     public void enqueue(Item x) {
         // TODO
         // Note: be aware of the special case when the queue is empty
+        Node newNode = new Node(x, null);
+        if (isEmpty()){
+            first = newNode;
+        }
+        else {
+            last.next = newNode;
+        }
+        last = newNode;
+        size++;
     }
 
+    /**
+     * The method removes and returns the first value in the queue.
+     * Time Complexity: O(1)
+     * @return the first item in the queue.
+     */
     public Item dequeue() {
         if (isEmpty()) throw new NoSuchElementException("Queue underflow");
         // TODO
         // Note: be aware of the special case when the queue becomes empty
-        return null;
+        Item dequeued = first.value;
+        if (size == 1){
+            last = null;
+        }
+        first = first.next;
+        size--;
+        return dequeued;
     }
 
     public Item peek() {
-        // TODO
-        return null;
+        if (isEmpty()) throw new NoSuchElementException("Queue underflow");
+        return last.value;
     }
 
     public boolean isEmpty() {
-        // TODO
-        return true;
+        if (size == 0){
+            return true;
+        }
+        return false;
     }
 
     public int size() {
-        // TODO
-        return 0;
+        return size;
     }
 
     // Iterate through all elements in the queue, in the order they will be removed
