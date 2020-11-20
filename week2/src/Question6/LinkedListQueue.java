@@ -7,7 +7,7 @@ import java.util.NoSuchElementException;
 
 // TODO: Add documentation, including time complexity for each method
 
-class LinkedListQueue<Item> implements Queue<Item>, Iterable<Item> {
+public class LinkedListQueue<Item> implements Queue<Item>, Iterable<Item> {
 
     private Node first;
     private Node last;

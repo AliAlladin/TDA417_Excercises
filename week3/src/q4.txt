@@ -1,0 +1,12 @@
+void union(Set<Key> other)
+    for Key k : other
+        put(k)
+
+
+void intersection(Set<Key> other)
+    for Node n : other
+        if get(n) == null
+            delete()
+
+
+void difference(Set<Key> other)
