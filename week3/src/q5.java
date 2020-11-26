@@ -8,7 +8,7 @@ public class q5 {
     }
 }
 
-public class RedBlackBST<Key extends Comparable<Key>, Value> {
+class RedBlackBST<Key extends Comparable<Key>, Value> {
 
     private static final boolean RED = true;
     private static final boolean BLACK = false;

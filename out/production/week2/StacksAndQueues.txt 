@@ -2,4 +2,5 @@ Q4. Because it's first in first out and the integers are enqueued in ascending o
     and that is the same sequence they were enqueued in. And thats also the general rule that the only possible sequence
     is the same sequence the integers were enqueued in.
 
-Q5. -
+Q5. If we can find a decreasing subsequence [a_m ... a_n] and if there exists a_m > a_k > a_n and a_k hasn't occurred in
+    the sequence before this subsequence then the sequence is invalid.
