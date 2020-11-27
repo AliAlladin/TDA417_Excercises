@@ -1,0 +1,10 @@
+boolean isHeap(Node n) {
+
+}
+
+private boolean less(Node parent, Node child)  {
+    if (parent.key <= child.key) {
+        return true;
+    }
+    return false;
+}

@@ -1,0 +1,4 @@
+I think the key is to add an extra variable to the nodes that hold the order in which the nodes were added to the queue
+and then if we're working with a queue we can make sure that the first element added to the que is always on top and can
+be removed in the right order. If we're implementing a stack instead we can make sure that the latest element added to
+the priority queue is on the top.
