@@ -11,35 +11,59 @@ public class q5 {
             maxHeap.add(i);
         }
 
-        maxHeap.remove(1);
-        maxHeap.remove(2);
+        maxHeap.remove();
+        maxHeap.remove();
 
-        for (Integer i : maxHeap) {
+        for (Object i : maxHeap) {
             System.out.println(i);
         }
+
     }
 }
 
-class MaxHeap<E> extends  PriorityQueue<E>{
+class MaxHeap<E extends Comparable> implements Iterable{
 
-    public E getMax () {
-        return this.peek();
-    }
+    PriorityQueue<E> maxHeap;
 
-    @Override
-    public Comparator<? super E> comparator() {
-        return new Comparator<E>() {
+    public MaxHeap() {
+        maxHeap = new PriorityQueue<>(new Comparator<E>() {
             @Override
             public int compare(E o1, E o2) {
-                if ((Integer) o1 < (Integer) o2){
+                if (o1.compareTo(o2) < 0){
                     return 1;
-                } else if ((Integer) o1 > (Integer) o2){
+                } else if (o1.compareTo(o2) > 0){
                     return -1;
                 } else {
                     return 0;
                 }
-
             }
-        };
+        });
+
+    }
+
+    public void add (E e){
+        maxHeap.add(e);
+    }
+
+    public E remove () {
+        return maxHeap.remove();
+    }
+
+    public E getMax () {
+        return maxHeap.peek();
+    }
+
+    @Override
+    public Iterator iterator() {
+        return maxHeap.iterator();
+    }
+
+    @Override
+    public void forEach(Consumer action) {
+        maxHeap.forEach(action);
+    }
+
+    public int size() {
+        return maxHeap.size();
     }
 }
