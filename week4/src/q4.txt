@@ -2,9 +2,13 @@ boolean isHeap(Node n) {
 
 }
 
-private boolean less(Node parent, Node child)  {
-    if (parent.key <= child.key) {
-        return true;
+private boolean isHeap(Node node)  {
+
+    if (node == null) {
+    return true;
+
+    if (node.key > node.left.key || node.key > node.right.key) {
+        return false;
     }
-    return false;
+    return isHeap(node.left) && isHeap(node.right);
 }
