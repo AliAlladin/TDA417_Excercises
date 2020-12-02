@@ -1,0 +1,13 @@
+[ | |A|C|F| | |T| | ]
+ 0 1 2 3 4 5 6 7 8 9
+
+Let's say A, C and F all have the same HashFunction and should therefore all be
+stored at index 2. But because that index is already busy after A is stored there
+the following elements will be stored at the indexes 3 and 4. Now if we choose to
+delete C we will end up with the following array:
+
+[ | |A| |F| | |T| | ]
+ 0 1 2 3 4 5 6 7 8 9
+
+If we now want to get F which is supposed to be at index 2 it will find A there.
+So it will look at the following index and see that it's null and break.
