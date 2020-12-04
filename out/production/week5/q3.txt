@@ -1,0 +1,10 @@
+Hash tables with separate chaining:
+    - Add, delete and get should take constant time.
+    - All elements that collide should be stored at the same index.
+    -
+
+Hash tables with linear probing:
+    - Add, delete and get should take constant time.
+    - Each index can hold maximum 1 element.
+    - The index where an element is removed from must hold an deleted object.
+

@@ -1,0 +1,17 @@
+ex2:    int hashcode(){
+            return (100x + 10y + 1z);
+        }
+
+        boolean (Point2D other){
+            return this.hashcode = other.hashcode;
+        }
+
+
+
+ex4:    1961, 4, 12
+        null
+        1961, 4, 12
+
+
+
+ex8:    -

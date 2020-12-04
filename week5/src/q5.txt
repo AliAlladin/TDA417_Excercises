@@ -1,0 +1,2 @@
+A lot of words would end up at the same index since many words have the same length which wouldn't be good for the
+distribution.

@@ -1,0 +1,1 @@
+Yes, it's legal but it's also a very bad implementation since all objects will have the same hashcode.

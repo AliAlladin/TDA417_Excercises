@@ -1,0 +1,6 @@
+Advantages:
+    - Insert, delete and search takes constant time.
+Disadvantages:
+    - Data is not sorted.
+    - Difficult to implement.
+    - Requires more memory.
