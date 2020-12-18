@@ -1,0 +1,34 @@
+=========
+= Array =
+=========
+
+public boolean linearSearch (T[] array, T item){
+    for (T i : array){
+        if (i == item){
+            return true;
+        }
+    }
+    return false;
+}
+
+Complexity: O(n)
+
+
+
+
+
+===============
+= Linked list =
+===============
+
+public boolean linearSearch (Node n, T item){
+    while (n == null){
+        if (n.equals(item)){
+            return true;
+        }
+        n = n.next;
+    }
+    return false;
+}
+
+Complexity: O(n)

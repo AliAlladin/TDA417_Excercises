@@ -1,0 +1,55 @@
+=============
+= Recursion =
+=============
+
+public boolean binarySearch (T[] array, T item){
+    return binarySearch (T[] array, item, 0, array.size - 1){
+}
+
+private boolean binarySearch (T[] array, T item, int lo, int hi){
+    if (lo > hi){
+        return false;
+    }
+    int mid = (hi + lo) / 2;
+    if (array[mid].equals(item)){
+        return true;
+    }
+    else if (array[mid].compareTo(item) > 0){
+        return binarySearch(array, item, mid+1, hi);
+    }
+    else {
+        return binarySearch(array, item, lo, mid-1);
+    }
+}
+
+Complexity: O(n)
+
+
+
+
+
+================
+= No Recursion =
+================
+
+public boolean binarySearch (T[] array, T item){
+    int lo = 0;
+    int hi = array.size - 1;
+    int mid = (hi + lo) / 2;
+
+    while (lo <= hi){
+        if (array[mid].equals(item)){
+                return true;
+        }
+        else if (array[mid].compareTo(item) > 0){
+            lo = mid + 1;
+        }
+        else {
+            hi = mid - 1;
+        }
+    }
+
+    return false;
+}
+
+Complexity: O(n)

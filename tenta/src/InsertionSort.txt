@@ -1,0 +1,9 @@
+- In-place algorithm which doesnt require any extra space.
+
+public void insertionSort (T[] array){
+    for (int i = 1; i < array.size; i++){
+        while (array[i] < array[i-1]){
+            
+        }
+    }
+}
