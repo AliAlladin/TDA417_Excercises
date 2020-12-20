@@ -1,0 +1,34 @@
+- Not In-place algorithm which requires some extra space.
+
+public void mergeSort (T[] arrayOld){
+    T[] arrayNew = new T[arrayOld.length];
+    sort(arrayOld, arrayNew, 0, array.length-1);
+}
+
+private void sort (T[] arrayOld, T[] arrayNew, int lo, int hi){
+    if (hi <= lo){
+        return;
+    }
+
+    int mid = lo + (hi - lo) / 2;
+    sort(arrayOld, arrayNew, lo, mid);
+    sort(arrayOld, arrayNew, mid+1, hi);
+    merge(arrayOld, arrayNew, lo, mid, hi)
+}
+
+private void merge (){
+    for (int k = lo; k <= hi; k++) {
+        arrayOld[k] = a[k];
+    }
+
+    int i = lo, j = mid+1;
+    for (int k = lo; k <= hi; k++) {
+        if      (i > mid)                   arrayNew[k] = arrayOld[j++];
+        else if (j > hi)                    arrayNew[k] = arrayOld[i++];
+        else if (arrayOld[j] < arrayOld[i]) arrayNew[k] = arrayOld[j++];
+        else                                arrayNew[k] = arrayOld[i++];
+    }
+}
+
+Best case       Avg. case       Worst case
+O(n*log(n))     O(n*log(n))     O(n*log(n))

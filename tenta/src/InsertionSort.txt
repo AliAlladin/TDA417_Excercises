@@ -2,8 +2,15 @@
 
 public void insertionSort (T[] array){
     for (int i = 1; i < array.size; i++){
-        while (array[i] < array[i-1]){
-            
+        int j = i;
+        while (array[j] < array[j-1] || j==0){
+            T tmp =  array[j-1]:
+            array[j-1] = array[j];
+            array[j] = tmp;
+            j--;
         }
     }
 }
+
+Best case   Avg. case   Worst case
+O(n)        O(n^2)      O(n^2)
